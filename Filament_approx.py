@@ -7,7 +7,6 @@ reddit: watching watches
 Formula to approximate the length and mass of the filament on your spool
 """
 import numpy as np
-L=[]    #creates empty list
 density = 1.25 #Pla: 1.25 change the density to your material
 """
 How to use:
@@ -19,6 +18,7 @@ Type for example: 'lenght(50,71,45,1.75)' all units in mm in the command window
 and press enter. The result will be in meters.
 """
 def lenght(r1,r2,b,d_f):
+    L=[]  #creates empty list
     k = 1 #start point of the sum
     n = (r2-r1)/d_f #number of layers
     rows = (b/d_f) #number of rows
