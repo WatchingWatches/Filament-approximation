@@ -4,11 +4,11 @@ Created on Thu May 26 23:36:36 2022
 
 @author: bjans
 reddit: watching watches
-Formula to approximate the length of the filament on your spool
+Formula to approximate the length and mass of the filament on your spool
 """
 import numpy as np
 L=[]    #creates empty list
-density = 1.25 #Pla 1.25
+density = 1.25 #Pla: 1.25 change the density to your material
 """
 How to use:
 r1 := inner radius of spool
@@ -34,7 +34,7 @@ def lenght(r1,r2,b,d_f):
         k+=1
     V = 0.9*10**-3*sum(L)
     Vol = A*V # volume of filament
-    m = Vol*density #mass of filament(change the density to yor material
+    m = Vol*density #mass of filament(change the density to your material)
     print(V,'[m]')
     print(m,'[g]')
     if (r1>=r2):
