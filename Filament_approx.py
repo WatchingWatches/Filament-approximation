@@ -8,6 +8,7 @@ Formula to approximate the length of the filament on your spool
 """
 import numpy as np
 L=[]    #creates empty list
+density = 1.25 #Pla 1.25
 """
 How to use:
 r1 := inner radius of spool
@@ -24,6 +25,7 @@ def lenght(r1,r2,b,d_f):
     #rounds the numbers to a whole number:
     round(n)
     round(rows)
+    A = np.pi*(d_f/2)**2
     while k <= n:
         def f(x):
              l = 2*np.pi*(r1+d_f*x-d_f/2)*rows
@@ -31,6 +33,9 @@ def lenght(r1,r2,b,d_f):
         L.append(f(k))
         k+=1
     V = 0.9*10**-3*sum(L)
+    Vol = A*V # volume of filament
+    m = Vol*density #mass of filament(change the density to yor material
     print(V,'[m]')
+    print(m,'[g]')
     if (r1>=r2):
         print('r2 needs to be greater than r1:',V,'is not the lenght of your filament')
