@@ -10,3 +10,5 @@ If you have any questions just pm me on reddit u/watching-watches
 There are two methods on how to use it in Klipper:
 1. Copy all of the code in "filament_approx.cfg" in your printer.cfg 
 2. Save the file and insert the (relative) path to the file in your printer.cfg like this: [include custom-commands/filament_aprox.cfg] (custom-commands is a folder)
+
+<int> You need to include this to your printer.cfg if you haven't already </int>: [respond] 
